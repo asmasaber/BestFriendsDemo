@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #67add5!important" >
+  <a class="navbar-brand" href="#">BestFriends</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Home <span class="sr-only">Friends</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Best Friends</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br/><br>
+<div class="contianer">
+  <!--<app-txt-question *ngFor="let question of filterItemsOfType('text')" id={{question._id}} text="{{question.text}}"></app-txt-question>
+  <app-tf-question *ngFor="let question of filterItemsOfType('tf')" id={{question._id}} text="{{question.text}}"></app-tf-question>
+  <app-mcq-question *ngFor="let question of filterItemsOfType('mcq')" id={{question._id}} text="{{question.text}}" [answers]="question.options"></app-mcq-question> -->
+
+  <!-- bind Text Questions -->
+  <div *ngFor="let question of filterItemsOfType('text')" >
+    <h3>{{question.text}} </h3>
+    <textarea class="form-control" id={{question._id}}></textarea>
+  </div>
+  <!-- End bind Text Questions -->
+  <!-- bind True/False Questions -->
+  <div *ngFor="let question of filterItemsOfType('tf')">
+    <h3>{{question.text}}</h3>
+    <div class="form-check form-check-inline">
+        <input id={{question._id}} class="form-check-input" type="radio" name="options" id="trueOption" value="true" checked>
+        <label class="form-check-label" for="trueOption">
+          True
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input id={{question._id}} class="form-check-input" type="radio" name="options" id="falseOption" value="false">
+        <label class="form-check-label" for="falseOption">
+          False
+        </label>
+      </div>
+  </div>
+  <!-- End bind True/False Questions -->
+  <!-- bind Multi Choose Questions -->
+  <div *ngFor="let question of filterItemsOfType('mcq')">
+    <h3>{{question.text}} </h3>
+    <div class="form-group form-check" *ngFor="let answer of question.options">
+        <input  id={{question._id}} class="form-check-input" type="checkbox" value="{{answer}}" >
+        <label class="form-check-label" for="defaultCheck1">
+          {{answer}}
+        </label>
+      </div>
+  </div>
+  <!-- End bind Multi Choose Questions -->
+  <button class="btn btn-primary" (click)="submitAnswers()">submit answers</button>
+</div>

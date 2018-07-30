@@ -1,0 +1,10 @@
+.navbar-light .navbar-brand {
+  color: #e9ecef;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #f8f9fa;
+  font-size: 18px;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #e9ecef;
+}

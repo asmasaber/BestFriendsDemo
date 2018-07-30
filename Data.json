@@ -1,0 +1,56 @@
+
+db.questions.insert({ "type" : "text", "text" : "where i working now?", "quizNum" : 1, "userId" : ObjectId("5b5cffa0d3c94ef5c2854d87"), "answer" : "Entlaqa" })
+db.questions.insert({ "type" : "mcq", "text" : "what is my job title?", "quizNum" : 1, "userId" : ObjectId("5b5cffa0d3c94ef5c2854d87"), "options" : [ "Frontend Developer", "Designer" ], "answer" : "answer1" })
+db.questions.insert({ "type" : "text", "text" : "where my office? ", "quizNum" : 1, "userId" : ObjectId("5b5cffa0d3c94ef5c2854d87"), "answer" : "at Step WorkSpace" })
+db.questions.insert({ "type" : "text", "text" : "how many brothers i have?", "quizNum" : 1, "userId" : ObjectId("5b5cffa0d3c94ef5c2854d87"), "answer" : "2" })
+db.questions.insert({ "type" : "mcq", "text" : "how many sisters i have?", "quizNum" : 1, "userId" : ObjectId("5b5cffa0d3c94ef5c2854d87"), "options" : [ "1", "2", "3" ], "answer" : "3" })
+db.questions.insert({ "type" : "tf", "text" : "is i married ?", "quizNum" : 1, "userId" : ObjectId("5b5cffa0d3c94ef5c2854d87"), "answer" : "False" })
+db.questions.insert({ "type" : "text", "text" : "where i from?", "quizNum" : 1, "userId" : ObjectId("5b5cffa0d3c94ef5c2854d87"), "answer" : "Assuit" })
+db.questions.insert({ "type" : "text", "text" : "what is my best friend name?", "quizNum" : 1, "userId" : ObjectId("5b5cffa0d3c94ef5c2854d87"), "answer" : "Afnan" })
+
+
+
+
+
+
+
+
+
+
+
+db.users.insert({
+ name: 'asma',
+ email: 'asma@mail.com',
+ password: '123'
+})
+db.users.insert({
+ name: 'afnam',
+ email: 'afnan@mail.com',
+ password: '123'
+})
+
+db.users.insert({
+ name: 'ali',
+ email: 'ali@mail.com',
+ password: '123'
+})
+
+db.users.insert({
+ name: 'mohamed',
+ email: 'mohamed@mail.com',
+ password: '123'
+})
+
+db.users.insert({
+ name: 'amira',
+ email: 'amira@mail.com',
+ password: '123'
+})
+
+db.users.insert({
+ name: 'ahmed',
+ email: 'ahmed@mail.com',
+ password: '123'
+})
+
+
